@@ -71,3 +71,35 @@ document.addEventListener('click', (event) => {
             }
         });
 
+
+
+
+
+
+
+
+
+
+        // ---------------------------------
+        document.getElementById('form').addEventListener('submit', async (event) => {
+            event.preventDefault();//it prevent to reload the page
+    
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('msg').value;
+    
+            const response = await fetch('http://localhost:8080/feedback/save', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+    
+            if (response.ok) {
+                alert('Message sent successfully!');
+            } else {
+                alert('Failed to send message.');
+            }
+        });
+

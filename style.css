@@ -80,9 +80,10 @@ body{
     color: red;
 }
 #sidebar{
-    display: none;
+    width: 40px;
 }
 #dbt{
+    display: none;
     background: none;
     border: none;
     cursor: pointer;
@@ -132,10 +133,11 @@ body{
     #intro{
         width: 85%;
     }
-    #sidebar{
+    
+    #dbt{
         display: block;
         width: 40px;
-    }
+     }
     #nav{
         display: none;
     }
@@ -438,6 +440,7 @@ button:active{
 
 }
 #contact_option{
+ padding-top: 30px;
  width: 40%;
  display: flex;
  flex-direction: column;
@@ -458,7 +461,7 @@ button:active{
 #contact_option h2{
     position: absolute;
     font-size: 3em;
-    top: 60px;
+    top: 130px;
 }
 #form{
     width: 40%;
