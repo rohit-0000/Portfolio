@@ -13,8 +13,13 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class User {
     @Id
     ObjectId id;
-//    @NonNull
+
+    @NonNull
     String name;
+
+    @NonNull
     String email;
+
+    @NonNull
     String message;
 }
